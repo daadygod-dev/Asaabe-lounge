@@ -1,0 +1,1081 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Asaabe Café & Eatery — Premium coffee, artisanal dining, and unforgettable events in the heart of the city. Reserve your table today.">
+  <meta name="keywords" content="Asaabe Cafe, coffee shop, restaurant, dine-in, reservations, delivery, takeout, breakfast, lunch, dinner">
+  <meta name="author" content="Asaabe Café & Eatery">
+  <meta name="robots" content="index, follow">
+
+  <!-- Open Graph / Social -->
+  <meta property="og:title" content="Asaabe Café & Eatery | Dine-In • Events • Delivery">
+  <meta property="og:description" content="Experience café-chic dining, premium events, and seamless delivery. Book your table or order online.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://asaabecafe.com/">
+  <meta property="og:image" content="assets/images/og-hero.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <title>Asaabe Café & Eatery | Dine-In • Events • Delivery</title>
+
+  <!-- Preconnect for Performance -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://cdn.jsdelivr.net">
+  <link rel="preconnect" href="https://images.unsplash.com">
+
+  <!-- Fonts: Playfair Display (Headings) + Inter (Body) -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+
+  <!-- Tailwind CSS v4 Browser CDN -->
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
+
+  <!-- Custom Styles -->
+  <link rel="stylesheet" href="css/style.css">
+
+  <!-- Schema.org JSON-LD: Restaurant -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Restaurant",
+    "name": "Asaabe Café & Eatery",
+    "image": "assets/images/og-hero.jpg",
+    "telephone": "+250-794-073-488",
+    "url": "https://asaabecafe.com",
+    "priceRange": "$$",
+    "servesCuisine": ["Coffee", "Breakfast", "Lunch", "Dinner", "Pastries"],
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "123 Main Street",
+      "addressLocality": "Kigali",
+      "addressCountry": "RW"
+    },
+    "openingHoursSpecification": [
+      {"@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"], "opens": "07:00", "closes": "22:00"},
+      {"@type": "OpeningHoursSpecification", "dayOfWeek": ["Saturday","Sunday"], "opens": "08:00", "closes": "23:00"}
+    ],
+    "potentialAction": {
+      "@type": "ReserveAction",
+      "target": {
+        "@type": "EntryPoint",
+        "urlTemplate": "https://asaabecafe.com/#reservation"
+      }
+    }
+  }
+  </script>
+</head>
+
+<body class="bg-[#FDFBF7] text-[#3D2B1F] font-[Inter,sans-serif] antialiased overflow-x-hidden">
+
+  <!-- ============================ -->
+  <!-- SKIP LINK (Accessibility)    -->
+  <!-- ============================ -->
+  <a href="#main-content" class="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 focus:z-[100] focus:bg-[#3D2B1F] focus:text-[#FDFBF7] focus:px-4 focus:py-2 focus:rounded-md">
+    Skip to main content
+  </a>
+
+  <!-- ============================ -->
+  <!-- NAVIGATION (Sticky Glass)  -->
+  <!-- ============================ -->
+   <header id="navbar" class="fixed top-0 left-0 right-0 z-50 transition-all duration-300" role="banner">
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between p-3">
+       <a href="index.html" class="flex items-center gap-2 group" aria-label="Asaabe Café & Eatery Home">
+         <img src="assets/images/og-hero.jpg" class="rounded-xl" width="50" height="50" />
+        </a>
+
+        <!-- Desktop Navigation -->
+        <nav class="hidden lg:flex items-center gap-8" role="navigation" aria-label="Main navigation">
+          <a href="#about" class="text-sm font-medium text-[#3D2B1F]/80 hover:text-[#3D2B1F] transition-colors relative after:absolute after:bottom-0 after:left-0 after:h-0.5 after:w-0 after:bg-[#4A5D4E] after:transition-all hover:after:w-full">Our Story</a>
+          <a href="menu.html" class="text-sm font-medium text-[#3D2B1F]/80 hover:text-[#3D2B1F] transition-colors relative after:absolute after:bottom-0 after:left-0 after:h-0.5 after:w-0 after:bg-[#4A5D4E] after:transition-all hover:after:w-full">Menu</a>
+          <a href="#gallery" class="text-sm font-medium text-[#3D2B1F]/80 hover:text-[#3D2B1F] transition-colors relative after:absolute after:bottom-0 after:left-0 after:h-0.5 after:w-0 after:bg-[#4A5D4E] after:transition-all hover:after:w-full">Gallery</a>
+          <a href="#order" class="text-sm font-medium text-[#3D2B1F]/80 hover:text-[#3D2B1F] transition-colors relative after:absolute after:bottom-0 after:left-0 after:h-0.5 after:w-0 after:bg-[#4A5D4E] after:transition-all hover:after:w-full">Order Online</a>
+
+          <!-- Persistent High-Conversion CTA -->
+          <button 
+            onclick="openReservationModal()" 
+            class="bg-[#4A5D4E] hover:bg-[#3d4d40] text-[#FDFBF7] px-6 py-2.5 rounded-full text-sm font-semibold transition-all duration-300 hover:shadow-lg hover:-translate-y-0.5 flex items-center gap-2"
+            aria-label="Reserve a table at Asaabe Café"
+          >
+            <i data-lucide="calendar-check" class="w-4 h-4"></i>
+            Reserve a Table
+          </button>
+        </nav>
+
+        <!-- Mobile Menu Toggle -->
+        <button 
+          id="mobile-menu-btn" 
+          class="lg:hidden p-2 rounded-lg hover:bg-[#3D2B1F]/5 transition-colors"
+          aria-label="Open mobile menu"
+          aria-expanded="false"
+          aria-controls="mobile-drawer"
+        >
+          <i data-lucide="menu" class="w-6 h-6 text-[#3D2B1F]"></i>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- ============================ -->
+  <!-- MOBILE DRAWER (Right Slide)  -->
+  <!-- ============================ -->
+  <div id="mobile-drawer-overlay" class="fixed inset-0 bg-black/40 z-[60] opacity-0 pointer-events-none transition-opacity duration-300 lg:hidden" aria-hidden="true"></div>
+
+  <div 
+    id="mobile-drawer" 
+    class="fixed top-0 right-0 bottom-0 w-[85vw] max-w-sm bg-[#FDFBF7] z-[70] transform translate-x-full transition-transform duration-300 ease-out will-change-transform lg:hidden shadow-2xl"
+    role="dialog"
+    aria-modal="true"
+    aria-label="Mobile navigation menu"
+  >
+    <div class="flex flex-col h-full p-6">
+      <div class="flex justify-between items-center mb-8">
+        
+      </div>
+
+      <nav class="flex flex-col gap-2 flex-1" role="navigation" aria-label="Mobile navigation">
+        <a href="#about" class="mobile-nav-link px-4 py-3 rounded-xl text-[#3D2B1F] font-medium hover:bg-[#3D2B1F]/5 transition-colors flex items-center gap-3">
+          <i data-lucide="book-open" class="w-5 h-5"></i> Our Story
+        </a>
+        <a href="menu.html" class="mobile-nav-link px-4 py-3 rounded-xl text-[#3D2B1F] font-medium hover:bg-[#3D2B1F]/5 transition-colors flex items-center gap-3">
+          <i data-lucide="utensils" class="w-5 h-5"></i> Menu
+        </a>
+        <a href="#gallery" class="mobile-nav-link px-4 py-3 rounded-xl text-[#3D2B1F] font-medium hover:bg-[#3D2B1F]/5 transition-colors flex items-center gap-3">
+          <i data-lucide="images" class="w-5 h-5"></i> Gallery
+        </a>
+        <a href="#order" class="mobile-nav-link px-4 py-3 rounded-xl text-[#3D2B1F] font-medium hover:bg-[#3D2B1F]/5 transition-colors flex items-center gap-3">
+          <i data-lucide="bike" class="w-5 h-5"></i> Order Online
+        </a>
+      </nav>
+
+      <div class="mt-auto pt-6 border-t border-[#3D2B1F]/10">
+        <button 
+          onclick="openReservationModal()" 
+          class="w-full bg-[#4A5D4E] hover:bg-[#3d4d40] text-[#FDFBF7] px-6 py-3.5 rounded-xl text-base font-semibold transition-all duration-300 flex items-center justify-center gap-2"
+        >
+          <i data-lucide="calendar-check" class="w-5 h-5"></i>
+          Reserve a Table
+        </button>
+
+        <div class="mt-6 flex items-center gap-3 text-sm text-[#3D2B1F]/70">
+          <i data-lucide="phone" class="w-4 h-4"></i>
+          <a href="tel:+250794073488" class="hover:text-[#3D2B1F] transition-colors">+250 794 073 488</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ============================ -->
+  <!-- HERO: Infinite Slider        -->
+  <!-- ============================ -->
+  <section id="hero" class="relative w-full overflow-hidden bg-[#3D2B1F]" aria-label="Hero slideshow">
+    <!-- 
+      HERO SLIDER ARCHITECTURE:
+      - Container: w-[200%] creates a double-width track for seamless looping
+      - Two identical slide sets enable infinite scroll without visible reset
+      - Animation: 20s linear infinite translateX
+      - Hover: animation-play-state: paused (handled in main.js via class toggle)
+      - Images: aspect-[16/9] + object-cover prevents CLS (Cumulative Layout Shift)
+      - Each image has loading="eager" for LCP (Largest Contentful Paint) optimization
+        Replace src with your own assets/images/hero-1.jpg, hero-2.jpg, hero-3.jpg
+    -->
+    <div id="hero-slider" class="flex w-[200%] hero-animate will-change-transform h-[350px]">
+      <!-- Slide Set 1 -->
+      <div class="w-1/2 flex shrink-0">
+        <div class="w-full relative aspect-[16/9] overflow-hidden">
+          <img 
+            src="https://images.unsplash.com/photo-1497935586351-b67a49e012bf?w=1600&q=80&auto=format&fit=crop" 
+            alt="Artisanal latte art at Asaabe Café — rich espresso with velvety steamed milk in a ceramic cup"
+            class="w-full h-full object-cover"
+            loading="eager"
+            decoding="async"
+            width="1600"
+            height="900"
+          >
+          <div class="absolute inset-0 bg-gradient-to-t from-[#3D2B1F]/80 via-[#3D2B1F]/20 to-transparent"></div>
+        </div>
+        <div class="w-full relative aspect-[16/9] overflow-hidden">
+          <img 
+            src="https://images.unsplash.com/photo-1554118811-1e0d58224f24?w=1600&q=80&auto=format&fit=crop" 
+            alt="Elegant café interior with warm ambient lighting and wooden furnishings at Asaabe"
+            class="w-full h-full object-cover"
+            loading="eager"
+            decoding="async"
+            width="1600"
+            height="900"
+          >
+          <div class="absolute inset-0 bg-gradient-to-t from-[#3D2B1F]/80 via-[#3D2B1F]/20 to-transparent"></div>
+        </div>
+        <div class="w-full relative aspect-[16/9] overflow-hidden">
+          <img 
+            src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?w=1600&q=80&auto=format&fit=crop" 
+            alt="Gourmet plated dinner dish with fresh herbs and premium presentation at Asaabe Eatery"
+            class="w-full h-full object-cover"
+            loading="eager"
+            decoding="async"
+            width="1600"
+            height="900"
+          >
+          <div class="absolute inset-0 bg-gradient-to-t from-[#3D2B1F]/80 via-[#3D2B1F]/20 to-transparent"></div>
+        </div>
+      </div>
+      <!-- Slide Set 2 (Duplicate for seamless loop) -->
+      <div class="w-1/2 flex shrink-0" aria-hidden="true">
+        <div class="w-full relative aspect-[16/9] overflow-hidden">
+          <img 
+            src="https://images.unsplash.com/photo-1497935586351-b67a49e012bf?w=1600&q=80&auto=format&fit=crop" 
+            alt=""
+            class="w-full h-full object-cover"
+            loading="lazy"
+            decoding="async"
+            width="1600"
+            height="900"
+          >
+          <div class="absolute inset-0 bg-gradient-to-t from-[#3D2B1F]/80 via-[#3D2B1F]/20 to-transparent"></div>
+        </div>
+        <div class="w-full relative aspect-[16/9] overflow-hidden">
+          <img 
+            src="https://images.unsplash.com/photo-1554118811-1e0d58224f24?w=1600&q=80&auto=format&fit=crop" 
+            alt=""
+            class="w-full h-full object-cover"
+            loading="lazy"
+            decoding="async"
+            width="1600"
+            height="900"
+          >
+          <div class="absolute inset-0 bg-gradient-to-t from-[#3D2B1F]/80 via-[#3D2B1F]/20 to-transparent"></div>
+        </div>
+        <div class="w-full relative aspect-[16/9] overflow-hidden">
+          <img 
+            src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?w=1600&q=80&auto=format&fit=crop" 
+            alt=""
+            class="w-full h-full object-cover"
+            loading="lazy"
+            decoding="async"
+            width="1600"
+            height="900"
+          >
+          <div class="absolute inset-0 bg-gradient-to-t from-[#3D2B1F]/80 via-[#3D2B1F]/20 to-transparent"></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Hero Content Overlay -->
+    <div class=" inset-0 z-10 flex items-center h-[50vh] justify-center pointer-events-none">
+      <div class="text-center px-4 max-w-4xl mx-auto">
+        <p class="text-[#FDFBF7]/80 text-sm md:text-base tracking-[0.2em] uppercase mb-4 animate-on-scroll opacity-0">
+          Karongi, Rwanda
+        </p>
+        <h1 class="font-[Playfair_Display,serif] text-5xl md:text-7xl lg:text-8xl font-bold text-[#FDFBF7] leading-[1.1] mb-6 animate-on-scroll opacity-0">
+          Where Every Cup<br>Tells a Story
+        </h1>
+        <p class="text-[#FDFBF7]/90 text-lg md:text-xl max-w-2xl mx-auto mb-8 font-light animate-on-scroll opacity-0">
+          Artisanal coffee, seasonal cuisine, and curated experiences for the modern palate.
+        </p>
+        <div class="flex flex-col sm:flex-row items-center justify-center gap-4 pointer-events-auto animate-on-scroll opacity-0">
+          <button onclick="openReservationModal()" class="bg-[#4A5D4E] hover:bg-[#3d4d40] text-[#FDFBF7] px-8 py-4 rounded-full text-base font-semibold transition-all duration-300 hover:shadow-xl hover:-translate-y-1 flex items-center gap-2">
+            <i data-lucide="calendar-check" class="w-5 h-5"></i>
+            Book a Table
+          </button>
+          <a href="menu.html" class="bg-[#FDFBF7]/10 hover:bg-[#FDFBF7]/20 backdrop-blur-sm text-[#FDFBF7] border border-[#FDFBF7]/30 px-8 py-4 rounded-full text-base font-semibold transition-all duration-300 flex items-center gap-2">
+            <i data-lucide="book-open" class="w-5 h-5"></i>
+            View Menu
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================ -->
+  <!-- MAIN CONTENT                 -->
+  <!-- ============================ -->
+  <main id="main-content">
+
+    <!-- ============================ -->
+    <!-- ABOUT / STORY SECTION        -->
+    <!-- ============================ -->
+    <section id="about" class="py-20 md:py-32 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+      <div class="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
+        <!-- Image with shimmer placeholder -->
+        <div class="relative animate-on-scroll opacity-0">
+          <div class="aspect-[4/5] rounded-2xl overflow-hidden bg-gray-200 shimmer-placeholder">
+            <img 
+              src="assets/images/hero-1.jpg" 
+              alt="Barista carefully pouring steamed milk into espresso at Asaabe Café counter"
+              class="w-full h-full object-cover"
+              loading="lazy"
+              decoding="async"
+              width="800"
+              height="1000"
+            >
+          </div>
+          <!-- Floating accent card -->
+          <div class="absolute -bottom-6 -right-6 md:bottom-8 md:-right-8 bg-[#FDFBF7] p-6 rounded-xl shadow-xl border border-[#3D2B1F]/5 max-w-[200px]">
+            <p class="font-[Playfair_Display,serif] text-3xl font-bold text-[#3D2B1F]">5+</p>
+            <p class="text-sm text-[#3D2B1F]/70 mt-1">Years of craft coffee excellence</p>
+          </div>
+        </div>
+
+        <div class="animate-on-scroll opacity-0">
+          <p class="text-[#4A5D4E] text-sm font-semibold tracking-[0.15em] uppercase mb-4">Our Story</p>
+          <h2 class="font-[Playfair_Display,serif] text-4xl md:text-5xl font-bold text-[#3D2B1F] leading-tight mb-6">
+            Rooted in Tradition,<br>Built for Today
+          </h2>
+          <div class="space-y-4 text-[#3D2B1F]/80 leading-relaxed">
+            <p>
+              Asaabe Café & Eatery was born from a simple belief: that great food and exceptional coffee 
+              have the power to bring people together. Our name, "Asaabe," reflects our commitment to 
+              craftsmanship — every bean is ethically sourced, every dish is prepared with intention.
+            </p>
+            <p>
+              From our signature pour-overs to our seasonal dinner menu, we celebrate local ingredients 
+              and global flavors. Whether you're joining us for a morning meeting, a leisurely brunch, 
+              or an intimate dinner, Asaabe is your sanctuary in the city.
+            </p>
+          </div>
+
+          <div class="mt-8 flex flex-wrap gap-6">
+            <div class="flex items-center gap-3">
+              <div class="w-12 h-12 rounded-full bg-[#4A5D4E]/10 flex items-center justify-center">
+                <i data-lucide="leaf" class="w-5 h-5 text-[#4A5D4E]"></i>
+              </div>
+              <div>
+                <p class="font-semibold text-[#3D2B1F] text-sm">Farm to Table</p>
+                <p class="text-xs text-[#3D2B1F]/60">Local sourcing</p>
+              </div>
+            </div>
+            <div class="flex items-center gap-3">
+              <div class="w-12 h-12 rounded-full bg-[#4A5D4E]/10 flex items-center justify-center">
+                <i data-lucide="heart" class="w-5 h-5 text-[#4A5D4E]"></i>
+              </div>
+              <div>
+                <p class="font-semibold text-[#3D2B1F] text-sm">Made with Love</p>
+                <p class="text-xs text-[#3D2B1F]/60">Every single dish</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================ -->
+    <!-- MENU PREVIEW (Masonry Grid)    -->
+    <!-- ============================ -->
+    <section id="menu" class="py-20 md:py-32 bg-white">
+      <div class="px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+        <div class="text-center mb-16 animate-on-scroll opacity-0">
+          <p class="text-[#4A5D4E] text-sm font-semibold tracking-[0.15em] uppercase mb-4">Curated Offerings</p>
+          <h2 class="font-[Playfair_Display,serif] text-4xl md:text-5xl font-bold text-[#3D2B1F] mb-4">
+            From Dawn to Dusk
+          </h2>
+          <p class="text-[#3D2B1F]/70 max-w-2xl mx-auto">
+            Explore our seasonal menus crafted by chefs who believe flavor should never be compromised.
+          </p>
+        </div>
+
+        <!-- 
+          MASONRY GRID:
+          - Desktop: 4 columns (lg:columns-4)
+          - Tablet: 2 columns (md:columns-2)  
+          - Mobile: 1 column (columns-1) with gap-6
+          - break-inside-avoid prevents items from splitting across columns
+          - Each item wrapped in bg-gray-200 shimmer-placeholder for CLS prevention
+          - Replace src paths with assets/images/menu-*.jpg
+        -->
+        <div class="columns-1 md:columns-2 lg:columns-4 gap-6 space-y-6">
+
+          <!-- Item 1 -->
+          <div class="break-inside-avoid animate-on-scroll opacity-0">
+            <div class="group relative rounded-2xl overflow-hidden bg-gray-200 shimmer-placeholder">
+              <img 
+                src="assets/images/image-1.jpg" 
+                alt="Classic avocado toast with poached egg and microgreens — breakfast menu item"
+                class="w-full h-auto object-cover transition-transform duration-500 group-hover:scale-105"
+                loading="lazy"
+                decoding="async"
+                width="600"
+                height="800"
+              >
+              <div class="absolute inset-0 bg-gradient-to-t from-[#3D2B1F]/70 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+              <div class="absolute bottom-0 left-0 right-0 p-4 translate-y-full group-hover:translate-y-0 transition-transform duration-300">
+                <p class="text-[#FDFBF7] font-semibold">Avocado & Poached Egg</p>
+                <p class="text-[#FDFBF7]/80 text-sm">Breakfast • 8,500 RWF</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Item 2 -->
+          <div class="break-inside-avoid animate-on-scroll opacity-0">
+            <div class="group relative rounded-2xl overflow-hidden bg-gray-200 shimmer-placeholder">
+              <img 
+                src="https://images.unsplash.com/photo-1514432324607-a09d9b4aefdd?w=600&q=80&auto=format&fit=crop" 
+                alt="Creamy iced caramel latte in a tall glass with whipped cream"
+                class="w-full h-auto object-cover transition-transform duration-500 group-hover:scale-105"
+                loading="lazy"
+                decoding="async"
+                width="600"
+                height="750"
+              >
+              <div class="absolute inset-0 bg-gradient-to-t from-[#3D2B1F]/70 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+              <div class="absolute bottom-0 left-0 right-0 p-4 translate-y-full group-hover:translate-y-0 transition-transform duration-300">
+                <p class="text-[#FDFBF7] font-semibold">Iced Caramel Latte</p>
+                <p class="text-[#FDFBF7]/80 text-sm">Beverages • 4,500 RWF</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Item 3 -->
+          <div class="break-inside-avoid animate-on-scroll opacity-0">
+            <div class="group relative rounded-2xl overflow-hidden bg-gray-200 shimmer-placeholder">
+              <img 
+                src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?w=600&q=80&auto=format&fit=crop" 
+                alt="Gourmet beef burger with melted cheese and caramelized onions"
+                class="w-full h-auto object-cover transition-transform duration-500 group-hover:scale-105"
+                loading="lazy"
+                decoding="async"
+                width="600"
+                height="600"
+              >
+              <div class="absolute inset-0 bg-gradient-to-t from-[#3D2B1F]/70 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+              <div class="absolute bottom-0 left-0 right-0 p-4 translate-y-full group-hover:translate-y-0 transition-transform duration-300">
+                <p class="text-[#FDFBF7] font-semibold">Asaabe Signature Burger</p>
+                <p class="text-[#FDFBF7]/80 text-sm">Lunch • 12,000 RWF</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Item 4 -->
+          <div class="break-inside-avoid animate-on-scroll opacity-0">
+            <div class="group relative rounded-2xl overflow-hidden bg-gray-200 shimmer-placeholder">
+              <img 
+                src="https://images.unsplash.com/photo-1476224203421-9ac39bcb3327?w=600&q=80&auto=format&fit=crop" 
+                alt="Grilled salmon fillet with roasted vegetables and herb butter"
+                class="w-full h-auto object-cover transition-transform duration-500 group-hover:scale-105"
+                loading="lazy"
+                decoding="async"
+                width="600"
+                height="900"
+              >
+              <div class="absolute inset-0 bg-gradient-to-t from-[#3D2B1F]/70 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+              <div class="absolute bottom-0 left-0 right-0 p-4 translate-y-full group-hover:translate-y-0 transition-transform duration-300">
+                <p class="text-[#FDFBF7] font-semibold">Grilled Salmon</p>
+                <p class="text-[#FDFBF7]/80 text-sm">Dinner • 18,500 RWF</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Item 5 -->
+          <div class="break-inside-avoid animate-on-scroll opacity-0">
+            <div class="group relative rounded-2xl overflow-hidden bg-gray-200 shimmer-placeholder">
+              <img 
+                src="https://images.unsplash.com/photo-1551024709-8f23befc6f87?w=600&q=80&auto=format&fit=crop" 
+                alt="Freshly baked croissants and pastries on a marble counter"
+                class="w-full h-auto object-cover transition-transform duration-500 group-hover:scale-105"
+                loading="lazy"
+                decoding="async"
+                width="600"
+                height="700"
+              >
+              <div class="absolute inset-0 bg-gradient-to-t from-[#3D2B1F]/70 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+              <div class="absolute bottom-0 left-0 right-0 p-4 translate-y-full group-hover:translate-y-0 transition-transform duration-300">
+                <p class="text-[#FDFBF7] font-semibold">Butter Croissants</p>
+                <p class="text-[#FDFBF7]/80 text-sm">Pastry • 3,000 RWF</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Item 6 -->
+          <div class="break-inside-avoid animate-on-scroll opacity-0">
+            <div class="group relative rounded-2xl overflow-hidden bg-gray-200 shimmer-placeholder">
+              <img 
+                src="https://images.unsplash.com/photo-1544025162-d76694265947?w=600&q=80&auto=format&fit=crop" 
+                alt="Rich chocolate lava cake with raspberry coulis and mint garnish"
+                class="w-full h-auto object-cover transition-transform duration-500 group-hover:scale-105"
+                loading="lazy"
+                decoding="async"
+                width="600"
+                height="800"
+              >
+              <div class="absolute inset-0 bg-gradient-to-t from-[#3D2B1F]/70 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+              <div class="absolute bottom-0 left-0 right-0 p-4 translate-y-full group-hover:translate-y-0 transition-transform duration-300">
+                <p class="text-[#FDFBF7] font-semibold">Chocolate Lava Cake</p>
+                <p class="text-[#FDFBF7]/80 text-sm">Dessert • 7,500 RWF</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Item 7 -->
+          <div class="break-inside-avoid animate-on-scroll opacity-0">
+            <div class="group relative rounded-2xl overflow-hidden bg-gray-200 shimmer-placeholder">
+              <img 
+                src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?w=600&q=80&auto=format&fit=crop" 
+                alt="Pour-over coffee being brewed with a gooseneck kettle and ceramic dripper"
+                class="w-full h-auto object-cover transition-transform duration-500 group-hover:scale-105"
+                loading="lazy"
+                decoding="async"
+                width="600"
+                height="650"
+              >
+              <div class="absolute inset-0 bg-gradient-to-t from-[#3D2B1F]/70 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+              <div class="absolute bottom-0 left-0 right-0 p-4 translate-y-full group-hover:translate-y-0 transition-transform duration-300">
+                <p class="text-[#FDFBF7] font-semibold">Single Origin Pour-Over</p>
+                <p class="text-[#FDFBF7]/80 text-sm">Coffee • 5,500 RWF</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Item 8 -->
+          <div class="break-inside-avoid animate-on-scroll opacity-0">
+            <div class="group relative rounded-2xl overflow-hidden bg-gray-200 shimmer-placeholder">
+              <img 
+                src="https://images.unsplash.com/photo-1600891964092-4316c288032e?w=600&q=80&auto=format&fit=crop" 
+                alt="Caesar salad with grilled chicken, parmesan, and house-made dressing"
+                class="w-full h-auto object-cover transition-transform duration-500 group-hover:scale-105"
+                loading="lazy"
+                decoding="async"
+                width="600"
+                height="750"
+              >
+              <div class="absolute inset-0 bg-gradient-to-t from-[#3D2B1F]/70 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+              <div class="absolute bottom-0 left-0 right-0 p-4 translate-y-full group-hover:translate-y-0 transition-transform duration-300">
+                <p class="text-[#FDFBF7] font-semibold">Asaabe Caesar Salad</p>
+                <p class="text-[#FDFBF7]/80 text-sm">Lunch • 9,500 RWF</p>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="text-center mt-12 animate-on-scroll opacity-0">
+          <a href="menu.html" class="inline-flex items-center gap-2 text-[#4A5D4E] font-semibold hover:gap-3 transition-all duration-300">
+            View Full Menu <i data-lucide="arrow-right" class="w-4 h-4"></i>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================ -->
+    <!-- ORDER ONLINE (Revenue)       -->
+    <!-- ============================ -->
+    <section id="order" class="py-20 md:py-32 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+      <div class="bg-[#3D2B1F] rounded-3xl overflow-hidden relative">
+        <!-- Background pattern -->
+        <div class="absolute inset-0 opacity-5">
+          <div class="absolute inset-0" style="background-image: radial-gradient(circle at 2px 2px, #FDFBF7 1px, transparent 0); background-size: 32px 32px;"></div>
+        </div>
+
+        <div class="relative z-10 grid lg:grid-cols-2 gap-12 p-8 md:p-16 items-center">
+          <div class="animate-on-scroll opacity-0">
+            <div class="inline-flex items-center gap-2 bg-[#FDFBF7]/10 text-[#FDFBF7]/90 px-4 py-2 rounded-full text-sm font-medium mb-6">
+              <i data-lucide="bike" class="w-4 h-4"></i>
+              Delivery & Takeout
+            </div>
+            <h2 class="font-[Playfair_Display,serif] text-3xl md:text-4xl lg:text-5xl font-bold text-[#FDFBF7] leading-tight mb-6">
+              Your Favorites,<br>Delivered Fresh
+            </h2>
+            <p class="text-[#FDFBF7]/80 text-lg mb-8 leading-relaxed">
+              Can't make it in? Enjoy the full Asaabe experience at home. Our delivery partners ensure 
+              your coffee arrives hot and your meals arrive ready to savor. Order online for pickup 
+              or delivery across Kigali.
+            </p>
+
+            <div class="flex flex-col sm:flex-row gap-4">
+              <a href="#" class="bg-[#4A5D4E] hover:bg-[#3d4d40] text-[#FDFBF7] px-8 py-4 rounded-full text-base font-semibold transition-all duration-300 hover:shadow-lg flex items-center justify-center gap-2">
+                <i data-lucide="shopping-bag" class="w-5 h-5"></i>
+                Order Online
+              </a>
+              <a href="tel:+250794073488" class="bg-[#FDFBF7]/10 hover:bg-[#FDFBF7]/20 text-[#FDFBF7] border border-[#FDFBF7]/20 px-8 py-4 rounded-full text-base font-semibold transition-all duration-300 flex items-center justify-center gap-2">
+                <i data-lucide="phone" class="w-5 h-5"></i>
+                Call to Order
+              </a>
+            </div>
+          </div>
+
+          <div class="grid grid-cols-2 gap-4 animate-on-scroll opacity-0">
+            <div class="space-y-4 mt-8">
+              <div class="bg-[#FDFBF7]/5 backdrop-blur-sm border border-[#FDFBF7]/10 rounded-2xl p-6 text-center hover:bg-[#FDFBF7]/10 transition-colors">
+                <i data-lucide="zap" class="w-8 h-8 text-[#FDFBF7] mx-auto mb-3"></i>
+                <p class="text-[#FDFBF7] font-semibold text-sm">Fast Delivery</p>
+                <p class="text-[#FDFBF7]/60 text-xs mt-1">30-45 min avg</p>
+              </div>
+              <div class="bg-[#FDFBF7]/5 backdrop-blur-sm border border-[#FDFBF7]/10 rounded-2xl p-6 text-center hover:bg-[#FDFBF7]/10 transition-colors">
+                <i data-lucide="package-check" class="w-8 h-8 text-[#FDFBF7] mx-auto mb-3"></i>
+                <p class="text-[#FDFBF7] font-semibold text-sm">Easy Pickup</p>
+                <p class="text-[#FDFBF7]/60 text-xs mt-1">Pre-order & skip queue</p>
+              </div>
+            </div>
+            <div class="space-y-4">
+              <div class="bg-[#FDFBF7]/5 backdrop-blur-sm border border-[#FDFBF7]/10 rounded-2xl p-6 text-center hover:bg-[#FDFBF7]/10 transition-colors">
+                <i data-lucide="map-pin" class="w-8 h-8 text-[#FDFBF7] mx-auto mb-3"></i>
+                <p class="text-[#FDFBF7] font-semibold text-sm">Citywide</p>
+                <p class="text-[#FDFBF7]/60 text-xs mt-1">All Kigali zones</p>
+              </div>
+              <div class="bg-[#FDFBF7]/5 backdrop-blur-sm border border-[#FDFBF7]/10 rounded-2xl p-6 text-center hover:bg-[#FDFBF7]/10 transition-colors">
+                <i data-lucide="gift" class="w-8 h-8 text-[#FDFBF7] mx-auto mb-3"></i>
+                <p class="text-[#FDFBF7] font-semibold text-sm">Loyalty Rewards</p>
+                <p class="text-[#FDFBF7]/60 text-xs mt-1">Earn on every order</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================ -->
+    <!-- GALLERY (Masonry Grid)       -->
+    <!-- ============================ -->
+    <section id="gallery" class="py-20 md:py-32 bg-white">
+      <div class="px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+        <div class="text-center mb-16 animate-on-scroll opacity-0">
+          <p class="text-[#4A5D4E] text-sm font-semibold tracking-[0.15em] uppercase mb-4">The Experience</p>
+          <h2 class="font-[Playfair_Display,serif] text-4xl md:text-5xl font-bold text-[#3D2B1F] mb-4">
+            Moments at Asaabe
+          </h2>
+          <p class="text-[#3D2B1F]/70 max-w-2xl mx-auto">
+            From intimate dinners to celebratory gatherings, every visit is a story worth sharing.
+          </p>
+        </div>
+
+        <!-- Gallery Masonry: 4-col desktop, 1-col mobile, gap-6 -->
+        <div class="columns-2 md:columns-3 lg:columns-4 gap-6 space-y-6">
+
+          <div class="break-inside-avoid animate-on-scroll opacity-0">
+            <div class="relative rounded-2xl overflow-hidden bg-gray-200 shimmer-placeholder group">
+              <img 
+                src="assets/images/image-2.jpg" 
+                alt="Warmly lit café interior with guests enjoying dinner and conversation"
+                class="w-full h-auto object-cover transition-transform duration-700 group-hover:scale-110"
+                loading="lazy"
+                decoding="async"
+                width="600"
+                height="800"
+              >
+              <div class="absolute inset-0 bg-[#3D2B1F]/0 group-hover:bg-[#3D2B1F]/30 transition-colors duration-300"></div>
+            </div>
+          </div>
+
+          <div class="break-inside-avoid animate-on-scroll opacity-0">
+            <div class="relative rounded-2xl overflow-hidden bg-gray-200 shimmer-placeholder group">
+              <img 
+                src="assets/images/image-4.jpg" 
+                alt="Close-up of hands clinking coffee cups over a wooden table"
+                class="w-full h-auto object-cover transition-transform duration-700 group-hover:scale-110"
+                loading="lazy"
+                decoding="async"
+                width="600"
+                height="600"
+              >
+              <div class="absolute inset-0 bg-[#3D2B1F]/0 group-hover:bg-[#3D2B1F]/30 transition-colors duration-300"></div>
+            </div>
+          </div>
+
+          <div class="break-inside-avoid animate-on-scroll opacity-0">
+            <div class="relative rounded-2xl overflow-hidden bg-gray-200 shimmer-placeholder group">
+              <img 
+                src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=600&q=80&auto=format&fit=crop" 
+                alt="Elegantly plated appetizer with microgreens on a white ceramic dish"
+                class="w-full h-auto object-cover transition-transform duration-700 group-hover:scale-110"
+                loading="lazy"
+                decoding="async"
+                width="600"
+                height="900"
+              >
+              <div class="absolute inset-0 bg-[#3D2B1F]/0 group-hover:bg-[#3D2B1F]/30 transition-colors duration-300"></div>
+            </div>
+          </div>
+
+          <div class="break-inside-avoid animate-on-scroll opacity-0">
+            <div class="relative rounded-2xl overflow-hidden bg-gray-200 shimmer-placeholder group">
+              <img 
+                src="assets/images/image-5.jpg" 
+                alt="Outdoor terrace seating with string lights and potted plants at dusk"
+                class="w-full h-auto object-cover transition-transform duration-700 group-hover:scale-110"
+                loading="lazy"
+                decoding="async"
+                width="600"
+                height="700"
+              >
+              <div class="absolute inset-0 bg-[#3D2B1F]/0 group-hover:bg-[#3D2B1F]/30 transition-colors duration-300"></div>
+            </div>
+          </div>
+
+          <div class="break-inside-avoid animate-on-scroll opacity-0">
+            <div class="relative rounded-2xl overflow-hidden bg-gray-200 shimmer-placeholder group">
+              <img 
+                src="assets/images/image-3.jpg" 
+                alt="Barista steaming milk with professional espresso machine in action"
+                class="w-full h-auto object-cover transition-transform duration-700 group-hover:scale-110"
+                loading="lazy"
+                decoding="async"
+                width="600"
+                height="650"
+              >
+              <div class="absolute inset-0 bg-[#3D2B1F]/0 group-hover:bg-[#3D2B1F]/30 transition-colors duration-300"></div>
+            </div>
+          </div>
+
+          <div class="break-inside-avoid animate-on-scroll opacity-0">
+            <div class="relative rounded-2xl overflow-hidden bg-gray-200 shimmer-placeholder group">
+              <img 
+                src="https://images.unsplash.com/photo-1551218808-94e220e084d2?w=600&q=80&auto=format&fit=crop" 
+                alt="Chef garnishing a gourmet dish in the Asaabe kitchen"
+                class="w-full h-auto object-cover transition-transform duration-700 group-hover:scale-110"
+                loading="lazy"
+                decoding="async"
+                width="600"
+                height="800"
+              >
+              <div class="absolute inset-0 bg-[#3D2B1F]/0 group-hover:bg-[#3D2B1F]/30 transition-colors duration-300"></div>
+            </div>
+          </div>
+
+          <div class="break-inside-avoid animate-on-scroll opacity-0">
+            <div class="relative rounded-2xl overflow-hidden bg-gray-200 shimmer-placeholder group">
+              <img 
+                src="https://images.unsplash.com/photo-1466978913421-dad2ebd01d17?w=600&q=80&auto=format&fit=crop" 
+                alt="Freshly baked sourdough bread and pastries on a rustic wooden board"
+                class="w-full h-auto object-cover transition-transform duration-700 group-hover:scale-110"
+                loading="lazy"
+                decoding="async"
+                width="600"
+                height="600"
+              >
+              <div class="absolute inset-0 bg-[#3D2B1F]/0 group-hover:bg-[#3D2B1F]/30 transition-colors duration-300"></div>
+            </div>
+          </div>
+
+          <div class="break-inside-avoid animate-on-scroll opacity-0">
+            <div class="relative rounded-2xl overflow-hidden bg-gray-200 shimmer-placeholder group">
+              <img 
+                src="https://images.unsplash.com/photo-1514362545857-3bc16c4c7d1b?w=600&q=80&auto=format&fit=crop" 
+                alt="Signature cocktail with fresh citrus garnish on the bar counter"
+                class="w-full h-auto object-cover transition-transform duration-700 group-hover:scale-110"
+                loading="lazy"
+                decoding="async"
+                width="600"
+                height="750"
+              >
+              <div class="absolute inset-0 bg-[#3D2B1F]/0 group-hover:bg-[#3D2B1F]/30 transition-colors duration-300"></div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================ -->
+    <!-- RESERVATION CTA BANNER         -->
+    <!-- ============================ -->
+    <section class="py-20 md:py-32 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+      <div class="relative rounded-3xl overflow-hidden bg-gray-200 shimmer-placeholder animate-on-scroll opacity-0">
+        <img 
+          src="assets/images/image-6.jpg" 
+          alt="Elegant private dining table setup with candles and floral arrangements for events"
+          class="w-full h-[400px] md:h-[500px] object-cover"
+          loading="lazy"
+          decoding="async"
+          width="1600"
+          height="500"
+        >
+        <div class="absolute inset-0 bg-[#3D2B1F]/60"></div>
+        <div class="absolute inset-0 flex items-center justify-center text-center p-8">
+          <div class="max-w-2xl">
+            <p class="text-[#FDFBF7]/80 text-sm tracking-[0.2em] uppercase mb-4">Private Events & Catering</p>
+            <h2 class="font-[Playfair_Display,serif] text-3xl md:text-5xl font-bold text-[#FDFBF7] mb-6">
+              Host Your Next<br>Celebration With Us
+            </h2>
+            <p class="text-[#FDFBF7]/90 text-lg mb-8">
+              From corporate lunches to birthday dinners, our team crafts bespoke experiences 
+              that leave lasting impressions. Inquire about our private dining room.
+            </p>
+            <button onclick="openReservationModal()" class="bg-[#4A5D4E] hover:bg-[#3d4d40] text-[#FDFBF7] px-8 py-4 rounded-full text-base font-semibold transition-all duration-300 hover:shadow-xl hover:-translate-y-1 inline-flex items-center gap-2">
+              <i data-lucide="calendar-check" class="w-5 h-5"></i>
+              Inquire Now
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ============================ -->
+  <!-- FOOTER                       -->
+  <!-- ============================ -->
+  <footer class="bg-[#3D2B1F] text-[#FDFBF7] pt-20 pb-10">
+    <div class="px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+      <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
+
+        <!-- Brand -->
+        <div class="lg:col-span-1">
+          <a href="index.html" class="flex items-center gap-2 mb-6" aria-label="Asaabe Café Home">
+            <i data-lucide="coffee" class="w-8 h-8 text-[#FDFBF7]"></i>
+            <span class="font-[Playfair_Display,serif] text-2xl font-bold">Asaabe</span>
+          </a>
+          <p class="text-[#FDFBF7]/70 text-sm leading-relaxed mb-6">
+            Artisanal coffee, seasonal cuisine, and curated experiences in the heart of Kigali.
+          </p>
+          <div class="flex gap-4">
+            <a href="#" class="w-10 h-10 rounded-full bg-[#FDFBF7]/10 flex items-center justify-center hover:bg-[#FDFBF7]/20 transition-colors" aria-label="Instagram">
+              <i data-lucide="instagram" class="w-5 h-5"></i>
+            </a>
+            <a href="#" class="w-10 h-10 rounded-full bg-[#FDFBF7]/10 flex items-center justify-center hover:bg-[#FDFBF7]/20 transition-colors" aria-label="Facebook">
+              <i data-lucide="facebook" class="w-5 h-5"></i>
+            </a>
+            <a href="#" class="w-10 h-10 rounded-full bg-[#FDFBF7]/10 flex items-center justify-center hover:bg-[#FDFBF7]/20 transition-colors" aria-label="Twitter">
+              <i data-lucide="twitter" class="w-5 h-5"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- Business Hours -->
+        <div>
+          <h3 class="font-semibold text-[#FDFBF7] mb-6 flex items-center gap-2">
+            <i data-lucide="clock" class="w-5 h-5 text-[#4A5D4E]"></i>
+            Business Hours
+          </h3>
+          <ul class="space-y-3 text-sm text-[#FDFBF7]/70">
+            <li class="flex justify-between">
+              <span>Monday – Friday</span>
+              <span class="text-[#FDFBF7]">7:00 AM – 10:00 PM</span>
+            </li>
+            <li class="flex justify-between">
+              <span>Saturday</span>
+              <span class="text-[#FDFBF7]">8:00 AM – 11:00 PM</span>
+            </li>
+            <li class="flex justify-between">
+              <span>Sunday</span>
+              <span class="text-[#FDFBF7]">8:00 AM – 11:00 PM</span>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Contact -->
+        <div>
+          <h3 class="font-semibold text-[#FDFBF7] mb-6 flex items-center gap-2">
+            <i data-lucide="map-pin" class="w-5 h-5 text-[#4A5D4E]"></i>
+            Contact
+          </h3>
+          <ul class="space-y-3 text-sm text-[#FDFBF7]/70">
+            <li class="flex items-start gap-3">
+              <i data-lucide="phone" class="w-4 h-4 mt-0.5 shrink-0"></i>
+              <a href="tel:+250794073488" class="hover:text-[#FDFBF7] transition-colors">+250 794 073 488</a>
+            </li>
+            <li class="flex items-start gap-3">
+              <i data-lucide="mail" class="w-4 h-4 mt-0.5 shrink-0"></i>
+              <a href="mailto:hello@asaabecafe.com" class="hover:text-[#FDFBF7] transition-colors">hello@asaabecafe.com</a>
+            </li>
+            <li class="flex items-start gap-3">
+              <i data-lucide="navigation" class="w-4 h-4 mt-0.5 shrink-0"></i>
+              <span>123 Main Street, Kigali, Rwanda</span>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Quick Links -->
+        <div>
+          <h3 class="font-semibold text-[#FDFBF7] mb-6 flex items-center gap-2">
+            <i data-lucide="link" class="w-5 h-5 text-[#4A5D4E]"></i>
+            Quick Links
+          </h3>
+          <ul class="space-y-3 text-sm text-[#FDFBF7]/70">
+            <li><a href="menu.html" class="hover:text-[#FDFBF7] transition-colors flex items-center gap-2"><i data-lucide="utensils" class="w-3 h-3"></i> Full Menu</a></li>
+            <li><a href="#" class="hover:text-[#FDFBF7] transition-colors flex items-center gap-2"><i data-lucide="bike" class="w-3 h-3"></i> Order Online</a></li>
+            <li><a href="#" onclick="openReservationModal(); return false;" class="hover:text-[#FDFBF7] transition-colors flex items-center gap-2"><i data-lucide="calendar-check" class="w-3 h-3"></i> Reservations</a></li>
+            <li><a href="#" class="hover:text-[#FDFBF7] transition-colors flex items-center gap-2"><i data-lucide="briefcase" class="w-3 h-3"></i> Careers</a></li>
+          </ul>
+        </div>
+
+      </div>
+
+      <div class="border-t border-[#FDFBF7]/10 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
+        <p class="text-sm text-[#FDFBF7]/50">
+          © 2024 Asaabe Café & Eatery. All rights reserved.
+        </p>
+        <div class="flex gap-6 text-sm text-[#FDFBF7]/50">
+          <a href="#" class="hover:text-[#FDFBF7] transition-colors">Privacy Policy</a>
+          <a href="#" class="hover:text-[#FDFBF7] transition-colors">Terms of Service</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ============================ -->
+  <!-- RESERVATION MODAL            -->
+  <!-- ============================ -->
+  <div 
+    id="reservation-modal" 
+    class="fixed inset-0 z-[80] hidden"
+    role="dialog"
+    aria-modal="true"
+    aria-labelledby="reservation-title"
+  >
+    <!-- Backdrop -->
+    <div id="modal-backdrop" class="absolute inset-0 bg-black/50 backdrop-blur-sm opacity-0 transition-opacity duration-300"></div>
+
+    <!-- Modal Content -->
+    <div class="absolute inset-0 flex items-center justify-center p-4 pointer-events-none">
+      <div 
+        id="modal-panel" 
+        class="bg-[#FDFBF7] w-full max-w-lg rounded-2xl shadow-2xl p-6 md:p-8 transform scale-95 opacity-0 transition-all duration-300 pointer-events-auto max-h-[90vh] overflow-y-auto"
+      >
+        <div class="flex justify-between items-center mb-6">
+          <div>
+            <h2 id="reservation-title" class="font-[Playfair_Display,serif] text-2xl md:text-3xl font-bold text-[#3D2B1F]">
+              Reserve a Table
+            </h2>
+            <p class="text-[#3D2B1F]/60 text-sm mt-1">Complete the form and we'll confirm shortly.</p>
+          </div>
+          <button onclick="closeReservationModal()" class="p-2 rounded-lg hover:bg-[#3D2B1F]/5 transition-colors" aria-label="Close reservation modal">
+            <i data-lucide="x" class="w-6 h-6 text-[#3D2B1F]"></i>
+          </button>
+        </div>
+
+        <form id="reservation-form" class="space-y-5">
+          <div class="grid md:grid-cols-2 gap-5">
+            <div>
+              <label for="res-name" class="block text-sm font-medium text-[#3D2B1F] mb-2">Full Name</label>
+              <input 
+                type="text" 
+                id="res-name" 
+                name="name" 
+                required
+                class="w-full px-4 py-3 rounded-xl border border-[#3D2B1F]/15 bg-white focus:border-[#4A5D4E] focus:ring-2 focus:ring-[#4A5D4E]/20 outline-none transition-all"
+                placeholder="John Doe"
+              >
+            </div>
+            <div>
+              <label for="res-phone" class="block text-sm font-medium text-[#3D2B1F] mb-2">Phone Number</label>
+              <input 
+                type="tel" 
+                id="res-phone" 
+                name="phone" 
+                required
+                class="w-full px-4 py-3 rounded-xl border border-[#3D2B1F]/15 bg-white focus:border-[#4A5D4E] focus:ring-2 focus:ring-[#4A5D4E]/20 outline-none transition-all"
+                placeholder="+250 794 073 488"
+              >
+            </div>
+          </div>
+
+          <div class="grid md:grid-cols-2 gap-5">
+            <div>
+              <label for="res-date" class="block text-sm font-medium text-[#3D2B1F] mb-2">Date</label>
+              <input 
+                type="date" 
+                id="res-date" 
+                name="date" 
+                required
+                class="w-full px-4 py-3 rounded-xl border border-[#3D2B1F]/15 bg-white focus:border-[#4A5D4E] focus:ring-2 focus:ring-[#4A5D4E]/20 outline-none transition-all"
+              >
+            </div>
+            <div>
+              <label for="res-time" class="block text-sm font-medium text-[#3D2B1F] mb-2">Time</label>
+              <input 
+                type="time" 
+                id="res-time" 
+                name="time" 
+                required
+                class="w-full px-4 py-3 rounded-xl border border-[#3D2B1F]/15 bg-white focus:border-[#4A5D4E] focus:ring-2 focus:ring-[#4A5D4E]/20 outline-none transition-all"
+              >
+            </div>
+          </div>
+
+          <div class="grid md:grid-cols-2 gap-5">
+            <div>
+              <label for="res-guests" class="block text-sm font-medium text-[#3D2B1F] mb-2">Guests</label>
+              <select 
+                id="res-guests" 
+                name="guests" 
+                required
+                class="w-full px-4 py-3 rounded-xl border border-[#3D2B1F]/15 bg-white focus:border-[#4A5D4E] focus:ring-2 focus:ring-[#4A5D4E]/20 outline-none transition-all"
+              >
+                <option value="">Select guests</option>
+                <option value="1">1 Person</option>
+                <option value="2">2 People</option>
+                <option value="3">3 People</option>
+                <option value="4">4 People</option>
+                <option value="5">5 People</option>
+                <option value="6">6 People</option>
+                <option value="7+">7+ People (Event)</option>
+              </select>
+            </div>
+            <div>
+              <label for="res-occasion" class="block text-sm font-medium text-[#3D2B1F] mb-2">Occasion</label>
+              <select 
+                id="res-occasion" 
+                name="occasion"
+                class="w-full px-4 py-3 rounded-xl border border-[#3D2B1F]/15 bg-white focus:border-[#4A5D4E] focus:ring-2 focus:ring-[#4A5D4E]/20 outline-none transition-all"
+              >
+                <option value="">Select occasion</option>
+                <option value="casual">Casual Dining</option>
+                <option value="business">Business Meeting</option>
+                <option value="date">Date Night</option>
+                <option value="birthday">Birthday</option>
+                <option value="anniversary">Anniversary</option>
+                <option value="corporate">Corporate Event</option>
+                <option value="other">Other</option>
+              </select>
+            </div>
+          </div>
+
+          <div>
+            <label for="res-notes" class="block text-sm font-medium text-[#3D2B1F] mb-2">Special Requests</label>
+            <textarea 
+              id="res-notes" 
+              name="notes" 
+              rows="3"
+              class="w-full px-4 py-3 rounded-xl border border-[#3D2B1F]/15 bg-white focus:border-[#4A5D4E] focus:ring-2 focus:ring-[#4A5D4E]/20 outline-none transition-all resize-none"
+              placeholder="Dietary restrictions, seating preferences, etc."
+            ></textarea>
+          </div>
+
+          <button 
+            type="submit" 
+            class="w-full bg-[#4A5D4E] hover:bg-[#3d4d40] text-[#FDFBF7] py-4 rounded-xl text-base font-semibold transition-all duration-300 hover:shadow-lg flex items-center justify-center gap-2"
+          >
+            <i data-lucide="calendar-check" class="w-5 h-5"></i>
+            Confirm Reservation
+          </button>
+
+          <p class="text-xs text-center text-[#3D2B1F]/50">
+            By booking, you agree to our reservation policy. Cancellations accepted up to 2 hours prior.
+          </p>
+        </form>
+
+        <!-- Success State (hidden by default) -->
+        <div id="reservation-success" class="hidden text-center py-8">
+          <div class="w-16 h-16 bg-[#4A5D4E]/10 rounded-full flex items-center justify-center mx-auto mb-4">
+            <i data-lucide="check-circle" class="w-8 h-8 text-[#4A5D4E]"></i>
+          </div>
+          <h3 class="font-[Playfair_Display,serif] text-2xl font-bold text-[#3D2B1F] mb-2">Reservation Received!</h3>
+          <p class="text-[#3D2B1F]/70 mb-6">We'll send a confirmation to your phone shortly. We look forward to hosting you.</p>
+          <button onclick="closeReservationModal()" class="bg-[#3D2B1F] text-[#FDFBF7] px-8 py-3 rounded-full font-semibold hover:bg-[#2a1d15] transition-colors">
+            Close
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ============================ -->
+  <!-- STICKY MOBILE CTA (Mobile)   -->
+  <!-- ============================ -->
+  <div class="fixed bottom-0 left-0 right-0 z-40 p-4 bg-gradient-to-t from-[#FDFBF7] to-transparent lg:hidden">
+    <button 
+      onclick="openReservationModal()" 
+      class="w-full bg-[#4A5D4E] hover:bg-[#3d4d40] text-[#FDFBF7] py-4 rounded-full text-base font-semibold shadow-lg transition-all duration-300 flex items-center justify-center gap-2"
+    >
+      <i data-lucide="calendar-check" class="w-5 h-5"></i>
+      Reserve a Table
+    </button>
+  </div>
+  <!-- Spacer for mobile sticky button -->
+  <div class="h-20 lg:hidden"></div>
+
+  <!-- Main JS -->
+  <script src="js/main.js"></script>
+</body>
+</html>
